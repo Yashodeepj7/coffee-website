@@ -11,13 +11,9 @@ function postSingleFile() {
       const distIndex = path.resolve(import.meta.dirname, 'dist/index.html');
       if (fs.existsSync(distIndex)) {
         let content = fs.readFileSync(distIndex, 'utf-8');
-        content = content.replace(/<script type="module" crossorigin>/g, '<script>');
-        content = content.replace(/<script type="module">/g, '<script>');
+        content = content.replace(/<script type="module" crossorigin>/g, '<script defer>');
+        content = content.replace(/<script type="module">/g, '<script defer>');
         fs.writeFileSync(distIndex, content, 'utf-8');
-
-        // Also copy to root index.html so both double-clicks work
-        const rootIndex = path.resolve(import.meta.dirname, '../index.html');
-        fs.writeFileSync(rootIndex, content, 'utf-8');
       }
     }
   };
