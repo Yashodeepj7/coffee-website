@@ -1,0 +1,183 @@
+/* ========================================================
+   SIDEBAR DRAWER & BACKDROP (MOBILE & TABLET)
+   ======================================================== */
+.sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 14, 11, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 96;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sidebar-backdrop.active,
+.sidebar-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.sidebar-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: min(340px, 86vw);
+  height: 100%;
+  background: var(--paper);
+  z-index: 97;
+  transform: translateX(-105%);
+  transition: transform 0.36s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px;
+  box-shadow: 12px 0 35px rgba(0, 0, 0, 0.25);
+  border-right: 1px solid var(--line);
+  overflow-y: auto;
+}
+
+.sidebar-drawer.open {
+  transform: translateX(0);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 16px;
+}
+
+.sidebar-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-brand .brand-title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.sidebar-brand .brand-tagline {
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  margin-top: 2px;
+}
+
+.close-sidebar-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--paper-warm);
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.close-sidebar-btn:hover {
+  border-color: var(--caramel);
+  color: var(--caramel);
+  transform: rotate(90deg);
+}
+
+.sidebar-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-size: 14.5px;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.sidebar-link .link-num {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--muted);
+  width: 24px;
+  letter-spacing: 0.05em;
+}
+
+.sidebar-link .link-text {
+  flex: 1;
+}
+
+.sidebar-link .link-arrow {
+  color: var(--muted);
+  transition: transform 0.2s ease, color 0.2s ease;
+  font-size: 14px;
+}
+
+.sidebar-link:hover {
+  background: var(--paper-warm);
+  color: var(--caramel);
+  padding-left: 18px;
+}
+
+.sidebar-link:hover .link-arrow {
+  transform: translateX(4px);
+  color: var(--caramel);
+}
+
+.sidebar-footer {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-promo-card {
+  background: var(--paper-warm);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+}
+
+.sidebar-promo-card .promo-tag {
+  display: inline-block;
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--caramel);
+  margin-bottom: 4px;
+}
+
+.sidebar-promo-card p {
+  font-size: 11.5px;
+  color: var(--ink-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.sidebar-trust-note {
+  font-size: 10px;
+  color: var(--muted);
+  text-align: center;
+  letter-spacing: 0.02em;
+}

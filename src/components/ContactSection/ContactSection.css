@@ -1,0 +1,66 @@
+.contact-section {
+  padding: 110px 0;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.contact-form-card {
+  background: var(--paper);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+}
+
+.form-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+}
+
+.form-input {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--line);
+  background: var(--paper-warm);
+  color: var(--ink);
+  font-size: 13.5px;
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+.form-input:focus {
+  border-color: var(--caramel);
+  background: var(--paper);
+  box-shadow: 0 0 0 3px rgba(184, 107, 62, 0.12);
+}
+
+.form-input option {
+  background: var(--paper);
+  color: var(--ink);
+}

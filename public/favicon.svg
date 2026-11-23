@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="beanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A2E1B"/>
+      <stop offset="50%" stop-color="#2A1810"/>
+      <stop offset="100%" stop-color="#190E0A"/>
+    </linearGradient>
+    <linearGradient id="creaseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5BE7B"/>
+      <stop offset="100%" stop-color="#B86B3E"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circular badge for visibility on dark/light tabs -->
+  <circle cx="32" cy="32" r="30" fill="#233D2E" stroke="#D4A762" stroke-width="2"/>
+  <!-- Roasted Coffee Bean body -->
+  <g transform="rotate(-30 32 32)">
+    <path d="M 32 14 C 42 14, 47 22, 47 32 C 47 42, 42 50, 32 50 C 22 50, 17 42, 17 32 C 17 22, 22 14, 32 14 Z" fill="url(#beanGrad)" stroke="#D4A762" stroke-width="1.2"/>
+    <path d="M 32 16 C 34 23, 28 27, 33 32 C 37 36, 30 43, 32 48" fill="none" stroke="url(#creaseGrad)" stroke-width="2.6" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,99 @@
+/* ========================================================
+   RITUAL SECTION (HOW IT WORKS)
+   ======================================================== */
+.ritual-section {
+  padding: 120px 0;
+  background: var(--bg-subtle);
+  position: relative;
+}
+
+.ritual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.ritual-image-frame {
+  height: 520px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+
+.ritual-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ritual-image-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #1A1410;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+body.dark .ritual-image-badge,
+body.dark-theme .ritual-image-badge {
+  background: rgba(24, 19, 15, 0.92);
+  color: var(--gold);
+  border: 1px solid rgba(229, 190, 123, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 36px 0;
+}
+
+.step-card {
+  display: flex;
+  gap: 22px;
+  padding: 22px;
+  background: var(--paper);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  transition: var(--transition-smooth);
+}
+
+.step-card:hover {
+  border-color: var(--caramel);
+  transform: translateX(8px);
+  box-shadow: var(--shadow-sm);
+}
+
+.step-num {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--caramel);
+  line-height: 1;
+}
+
+.step-card h3 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  color: var(--ink);
+}
+
+.step-card p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.6;
+}

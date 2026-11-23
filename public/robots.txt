@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yashodeepj7.github.io/coffee-website/sitemap.xml

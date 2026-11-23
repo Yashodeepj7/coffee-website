@@ -1,0 +1,136 @@
+.testimonial-section {
+  padding: 110px 0;
+}
+
+.testimonial-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.slider-nav-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.slider-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 18px;
+  display: grid;
+  place-items: center;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.slider-nav-btn:hover {
+  background: var(--green);
+  color: #FFF;
+  border-color: var(--green);
+  transform: scale(1.08);
+}
+
+.reviews-window {
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.reviews-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.review-card {
+  min-width: calc((100% - 48px) / 3);
+  background: var(--paper);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.star-rating {
+  color: #E29E4B;
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.review-card blockquote {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0 0 24px 0;
+  min-height: 110px;
+}
+
+.reviewer-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.reviewer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--caramel-light);
+  color: var(--caramel);
+  font-weight: 700;
+  font-size: 12px;
+  display: grid;
+  place-items: center;
+}
+
+.reviewer-avatar.avatar-green {
+  background: #E2EBE2;
+  color: #2C4A38;
+}
+
+body.dark .reviewer-avatar.avatar-green,
+body.dark-theme .reviewer-avatar.avatar-green {
+  background: rgba(59, 95, 72, 0.35);
+  color: #8FD1A3;
+  border: 1px solid rgba(59, 95, 72, 0.5);
+}
+
+.reviewer-avatar.avatar-caramel {
+  background: #F5EBE1;
+  color: #8F532F;
+}
+
+body.dark .reviewer-avatar.avatar-caramel,
+body.dark-theme .reviewer-avatar.avatar-caramel {
+  background: rgba(217, 133, 85, 0.28);
+  color: var(--gold);
+  border: 1px solid rgba(217, 133, 85, 0.4);
+}
+
+.reviewer-info b {
+  display: block;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.reviewer-info small {
+  color: var(--muted);
+  font-size: 11px;
+}

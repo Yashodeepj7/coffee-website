@@ -1,0 +1,58 @@
+/* ========================================================
+   DESIGN SYSTEM TOKENS & COLOR PALETTES
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #F5EFE6;
+  --bg-subtle: #EFE7DC;
+  --paper: #FFFFFF;
+  --paper-warm: #FAF6F0;
+  --ink: #261B14;
+  --ink-secondary: #483A31;
+  --muted: #7E7065;
+  --line: #E2D7CB;
+  --line-subtle: rgba(72, 58, 49, 0.1);
+  --green: #233D2E;
+  --green-hover: #1A2F23;
+  --green-light: #E7EFEA;
+  --sage: #DFE8DD;
+  --caramel: #B86B3E;
+  --caramel-light: #F7EDE6;
+  --gold: #D4A762;
+  --gold-subtle: #F3EBDD;
+  --shadow-sm: 0 4px 18px rgba(38, 27, 20, 0.05);
+  --shadow-md: 0 16px 40px rgba(38, 27, 20, 0.08);
+  --shadow-lg: 0 28px 70px rgba(38, 27, 20, 0.14);
+  --font-serif: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-sans: 'DM Sans', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body.dark, body.dark-theme {
+  --bg: #14110E;
+  --bg-subtle: #1C1713;
+  --paper: #1F1915;
+  --paper-warm: #261F1A;
+  --ink: #F7F2EC;
+  --ink-secondary: #D9CFC5;
+  --muted: #A39588;
+  --line: #382D25;
+  --line-subtle: rgba(247, 242, 236, 0.1);
+  --green: #3B5F48;
+  --green-hover: #487559;
+  --green-light: #202D24;
+  --sage: #28352A;
+  --caramel: #D98555;
+  --caramel-light: #2D201A;
+  --gold: #E5BE7B;
+  --gold-subtle: #2C251D;
+  --shadow-sm: 0 4px 18px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 28px 70px rgba(0, 0, 0, 0.7);
+}

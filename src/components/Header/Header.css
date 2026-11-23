@@ -1,0 +1,192 @@
+/* ========================================================
+   TOP SCROLL READING PROGRESS BAR
+   ======================================================== */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3.5px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--caramel), var(--gold), var(--green));
+  z-index: 100;
+  box-shadow: 0 0 12px rgba(184, 107, 62, 0.5);
+  transition: width 0.1s ease-out;
+}
+
+/* ========================================================
+   ANNOUNCEMENT BAR WITH CLICKABLE COUPON CODE
+   ======================================================== */
+.announcement {
+  background: var(--green);
+  color: #F8F5EE;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  padding: 8px 16px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  z-index: 25;
+}
+
+.announcement span.sep {
+  opacity: 0.5;
+  color: var(--gold);
+}
+
+.announcement-short-text {
+  display: none;
+}
+
+.promo-badge {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.promo-badge:hover {
+  background: var(--gold);
+  color: #1A1410;
+  border-color: var(--gold);
+  transform: scale(1.05);
+}
+
+/* ========================================================
+   SITE HEADER & NAVIGATION
+   ======================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  background: rgba(245, 239, 230, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line-subtle);
+  height: 82px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 5%;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+body.dark .site-header, body.dark-theme .site-header {
+  background: rgba(20, 17, 14, 0.88);
+}
+
+.site-header.scrolled {
+  box-shadow: var(--shadow-sm);
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-secondary);
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.25s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1.5px;
+  background: var(--caramel);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--caramel);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.brand-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.brand-tagline {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  color: var(--caramel);
+  margin-top: 4px;
+}
+
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 18px;
+}
+
+.header-right .nav-link {
+  font-size: 12.5px;
+}
+
+.bag-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green);
+  color: #FFFFFF;
+  padding: 9px 18px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 14px rgba(35, 61, 46, 0.25);
+  transition: var(--transition-smooth);
+}
+
+.bag-pill-btn:hover {
+  background: var(--green-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(35, 61, 46, 0.35);
+}
+
+.bag-pill-btn .cart-count {
+  background: var(--gold);
+  color: #1A1410;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.menu-toggle {
+  display: none;
+}

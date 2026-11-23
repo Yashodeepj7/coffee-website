@@ -1,0 +1,36 @@
+/* ========================================================
+   TRUST STRIP BANNER
+   ======================================================== */
+.trust-strip {
+  background: var(--bg-subtle);
+  border-top: 1px solid var(--line-subtle);
+  border-bottom: 1px solid var(--line-subtle);
+  padding: 24px 5%;
+  margin-top: 20px;
+  position: relative;
+  z-index: 5;
+}
+
+.trust-strip-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-secondary);
+}
+
+.trust-item .icon {
+  color: var(--caramel);
+  font-size: 16px;
+}
